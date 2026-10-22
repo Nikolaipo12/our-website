@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Announcements · Barangay Sta. Lucia</title>
+    <meta name="description" content="Latest news and public notices from Barangay Sta. Lucia.">
+    <link rel="stylesheet" href="styles.css">
+    <script>
+      // Show the branded loader only when arriving through an internal link.
+      try {
+        if (window.sessionStorage.getItem("bsl.nav") === "1") {
+          document.documentElement.classList.add("page-arriving");
+          window.sessionStorage.removeItem("bsl.nav");
+        }
+      } catch (error) {}
+      window.setTimeout(function () {
+        document.documentElement.classList.remove("page-arriving", "page-revealing");
+      }, 4000);
+    </script>
+  </head>
+  <body data-page="announcements">
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+    <div class="page-loader" aria-hidden="true">
+      <div class="page-loader-inner">
+        <span class="page-loader-mark">SL</span>
+        <span class="page-loader-name">Barangay Sta. Lucia</span>
+        <span class="page-loader-note">Community Information System &middot; Santa Ana, Pampanga</span>
+        <span class="page-loader-track"><span></span></span>
+      </div>
+    </div>
+    <div class="topbar">
+      <div class="page topbar-inner">
+        <span class="topbar-location">Sta. Lucia, Santa Ana, Pampanga</span>
+        <span class="topbar-hours">Mon&ndash;Fri &middot; 8:00 AM&ndash;5:00 PM</span>
+        <a href="tel:09001234567" class="topbar-emergency">Emergency: 0900-123-4567</a>
+      </div>
+    </div>
+    <header>
+      <input type="checkbox" id="nav-toggle" aria-hidden="true">
+      <div class="nav-inner">
+        <a href="index.html" class="brand">
+          <span class="seal" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M3 10 12 4l9 6M5 10v9M9.5 10v9M14.5 10v9M19 10v9M3 21h18" stroke="#FFFFFF" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+              
+            </svg>
+          </span>
+          <div>
+            <div class="brand-name">Barangay Sta. Lucia</div>
+            <div class="brand-sub">Community Information System</div>
+          </div>
+        </a>
+
+        <nav class="nav-links" aria-label="Primary">
+                    <a href="index.html">Home</a>
+          <a href="announcements.html" aria-current="page">Announcements</a>
+          <a href="services.html">Services</a>
+          <a href="emergency.html">Emergency</a>
+          <a href="officials.html">Officials</a>
+          <a href="concerns.html">Concerns</a>
+        </nav>
+
+        <a href="portal.html" class="cta-button">Resident Portal</a>
+
+        <label for="nav-toggle" class="menu-toggle">
+          <span class="bars" aria-hidden="true"><span></span><span></span><span></span></span>
+          <span class="visually-hidden menu-toggle-label">Open menu</span>
+        </label>
+      </div>
+
+      <div class="nav-scrim" aria-hidden="true"></div>
+      <nav class="mobile-menu" aria-label="Mobile">
+          <label for="nav-toggle" class="mobile-menu-close">
+            <span aria-hidden="true">&times;</span>
+            <span class="visually-hidden">Close menu</span>
+          </label>
+                    <a href="index.html">Home</a>
+          <a href="announcements.html" aria-current="page">Announcements</a>
+          <a href="services.html">Services</a>
+          <a href="emergency.html">Emergency</a>
+          <a href="officials.html">Officials</a>
+          <a href="concerns.html">Concerns</a>
+          <a href="portal.html" class="cta-button">Resident Portal</a>
+      </nav>
+    </header>
+
+    <main id="main-content" tabindex="-1">
+      <section class="page section-first filter-section">
+        <div class="page-header">
+          <h1>Announcements</h1>
+          <p>Newest community news and important public notices.</p>
+        </div>
+
+        <p class="visually-hidden" id="announcement-filter-help">Filter announcements by category.</p>
+        <input class="filter-input" type="radio" name="filter" id="filter-all" value="All" aria-describedby="announcement-filter-help" aria-controls="announcements-grid" checked>
+        <label class="filter-label" for="filter-all">All</label>
+        <input class="filter-input" type="radio" name="filter" id="filter-general" value="General" aria-describedby="announcement-filter-help" aria-controls="announcements-grid">
+        <label class="filter-label" for="filter-general">General</label>
+        <input class="filter-input" type="radio" name="filter" id="filter-events" value="Events" aria-describedby="announcement-filter-help" aria-controls="announcements-grid">
+        <label class="filter-label" for="filter-events">Events</label>
+        <input class="filter-input" type="radio" name="filter" id="filter-services" value="Services" aria-describedby="announcement-filter-help" aria-controls="announcements-grid">
+        <label class="filter-label" for="filter-services">Services</label>
+        <input class="filter-input" type="radio" name="filter" id="filter-emergency" value="Emergency" aria-describedby="announcement-filter-help" aria-controls="announcements-grid">
+        <label class="filter-label" for="filter-emergency">Emergency</label>
+        <input class="filter-input" type="radio" name="filter" id="filter-community" value="Community" aria-describedby="announcement-filter-help" aria-controls="announcements-grid">
+        <label class="filter-label" for="filter-community">Community</label>
+        <p class="visually-hidden" id="announcement-filter-status" role="status"></p>
+
+        <h2 class="visually-hidden">Barangay announcements</h2>
+        <div class="cards-grid" id="announcements-grid">
+          <noscript>
+            <p class="meta">Enable JavaScript to load the latest barangay announcements.</p>
+          </noscript>
+        </div>
+      </section>
+    </main>
+
+    <dialog class="form-dialog announcement-dialog" id="announcement-dialog" aria-labelledby="announcement-detail-title">
+      <div class="dialog-head">
+        <div>
+          <span class="pill" id="announcement-detail-category">Announcement</span>
+          <h2 id="announcement-detail-title">Announcement</h2>
+          <p id="announcement-detail-meta"></p>
+        </div>
+        <button type="button" class="dialog-close" data-close-announcement aria-label="Close announcement">&times;</button>
+      </div>
+      <div class="dialog-body">
+        <p class="announcement-body" id="announcement-detail-body"></p>
+      </div>
+      <div class="dialog-actions">
+        <button type="button" class="secondary-button" data-close-announcement>Close</button>
+      </div>
+    </dialog>
+
+    <footer>
+      <div class="page footer-grid">
+        <div>
+          <h3>Barangay Sta. Lucia</h3>
+          <p>The community information system for residents and visitors of Sta. Lucia, Santa Ana, Pampanga. Stay informed, connected, and supported.</p>
+        </div>
+        <div>
+          <h4>Quick Links</h4>
+          <a href="index.html">Home</a><br >
+          <a href="services.html">Services</a><br >
+          <a href="emergency.html">Emergency</a><br >
+          <a href="concerns.html">Concerns</a>
+        </div>
+        <div>
+          <h4>Contact</h4>
+          <p>Barangay Hall<br >0998-765-4321<br >sta.lucia.barangay@example.com<br >Mon&ndash;Fri &middot; 8:00 AM&ndash;5:00 PM</p>
+        </div>
+        <div>
+          <h4>Emergency Hotline</h4>
+          <p>0900-123-4567</p>
+        </div>
+      </div>
+      <div class="page footer-bottom">
+        <small>&copy; 2026 Barangay Sta. Lucia. All rights reserved.</small>
+      </div>
+    </footer>
+
+    <script src="js/db.js"></script>
+    <script src="js/site.js"></script>
+    <script src="js/announcements.js"></script>
+  </body>
+</html>

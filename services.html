@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services · Barangay Sta. Lucia</title>
+    <meta name="description" content="Request barangay clearance, certificates, and other documents.">
+    <link rel="stylesheet" href="styles.css">
+    <script>
+      // Show the branded loader only when arriving through an internal link.
+      try {
+        if (window.sessionStorage.getItem("bsl.nav") === "1") {
+          document.documentElement.classList.add("page-arriving");
+          window.sessionStorage.removeItem("bsl.nav");
+        }
+      } catch (error) {}
+      window.setTimeout(function () {
+        document.documentElement.classList.remove("page-arriving", "page-revealing");
+      }, 4000);
+    </script>
+  </head>
+  <body data-page="services">
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+    <div class="page-loader" aria-hidden="true">
+      <div class="page-loader-inner">
+        <span class="page-loader-mark">SL</span>
+        <span class="page-loader-name">Barangay Sta. Lucia</span>
+        <span class="page-loader-note">Community Information System &middot; Santa Ana, Pampanga</span>
+        <span class="page-loader-track"><span></span></span>
+      </div>
+    </div>
+    <div class="topbar">
+      <div class="page topbar-inner">
+        <span class="topbar-location">Sta. Lucia, Santa Ana, Pampanga</span>
+        <span class="topbar-hours">Mon&ndash;Fri &middot; 8:00 AM&ndash;5:00 PM</span>
+        <a href="tel:09001234567" class="topbar-emergency">Emergency: 0900-123-4567</a>
+      </div>
+    </div>
+    <header>
+      <input type="checkbox" id="nav-toggle" aria-hidden="true">
+      <div class="nav-inner">
+        <a href="index.html" class="brand">
+          <span class="seal" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M3 10 12 4l9 6M5 10v9M9.5 10v9M14.5 10v9M19 10v9M3 21h18" stroke="#FFFFFF" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+              
+            </svg>
+          </span>
+          <div>
+            <div class="brand-name">Barangay Sta. Lucia</div>
+            <div class="brand-sub">Community Information System</div>
+          </div>
+        </a>
+
+        <nav class="nav-links" aria-label="Primary">
+                    <a href="index.html">Home</a>
+          <a href="announcements.html">Announcements</a>
+          <a href="services.html" aria-current="page">Services</a>
+          <a href="emergency.html">Emergency</a>
+          <a href="officials.html">Officials</a>
+          <a href="concerns.html">Concerns</a>
+        </nav>
+
+        <a href="portal.html" class="cta-button">Resident Portal</a>
+
+        <label for="nav-toggle" class="menu-toggle">
+          <span class="bars" aria-hidden="true"><span></span><span></span><span></span></span>
+          <span class="visually-hidden menu-toggle-label">Open menu</span>
+        </label>
+      </div>
+
+      <div class="nav-scrim" aria-hidden="true"></div>
+      <nav class="mobile-menu" aria-label="Mobile">
+          <label for="nav-toggle" class="mobile-menu-close">
+            <span aria-hidden="true">&times;</span>
+            <span class="visually-hidden">Close menu</span>
+          </label>
+                    <a href="index.html">Home</a>
+          <a href="announcements.html">Announcements</a>
+          <a href="services.html" aria-current="page">Services</a>
+          <a href="emergency.html">Emergency</a>
+          <a href="officials.html">Officials</a>
+          <a href="concerns.html">Concerns</a>
+          <a href="portal.html" class="cta-button">Resident Portal</a>
+      </nav>
+    </header>
+
+    <main id="main-content" tabindex="-1">
+      <section class="page section-first">
+        <div class="page-header">
+          <h1>Barangay services</h1>
+          <p>Available services for residents and document requests, with straightforward instructions.</p>
+        </div>
+
+        <h2 class="visually-hidden">Available barangay services</h2>
+        <div class="grid-auto">
+          <article class="service-card">
+            <span class="service-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z"/><path d="M14 2v6h6"/><path d="m9 15 2 2 4-4"/></svg>
+            </span>
+            <span class="pill">Document</span>
+            <h3>Barangay Clearance</h3>
+            <p>Proof of residency for employment, school, or official applications.</p>
+            <dl class="service-specs">
+              <div><dt>Processing</dt><dd>1&ndash;2 working days</dd></div>
+            </dl>
+            <p class="service-docs"><strong>Bring:</strong> valid ID and proof of address.</p>
+            <a class="service-request" href="#request-service" data-request-type="Barangay Clearance">Request this service</a>
+          </article>
+          <article class="service-card">
+            <span class="service-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.5-1.5 2-3.1 2-4.5A4.5 4.5 0 0 0 16.5 5c-1.8 0-3.3.9-4.5 2.3C10.8 5.9 9.3 5 7.5 5A4.5 4.5 0 0 0 3 9.5c0 1.4.5 3 2 4.5l7 7Z"/><path d="M12 11v6M9 14h6"/></svg>
+            </span>
+            <span class="pill">Assistance</span>
+            <h3>Certificate of Indigency</h3>
+            <p>Support for medical assistance, scholarships, and social services.</p>
+            <dl class="service-specs">
+              <div><dt>Processing</dt><dd>2&ndash;4 working days</dd></div>
+            </dl>
+            <p class="service-docs"><strong>Bring:</strong> valid ID and income documents.</p>
+            <a class="service-request" href="#request-service" data-request-type="Certificate of Indigency">Request this service</a>
+          </article>
+          <article class="service-card">
+            <span class="service-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+            </span>
+            <span class="pill">Business</span>
+            <h3>Business Permit</h3>
+            <p>Clearance for new and renewing businesses operating in the barangay.</p>
+            <dl class="service-specs">
+              <div><dt>Processing</dt><dd>2&ndash;3 working days</dd></div>
+            </dl>
+            <p class="service-docs"><strong>Bring:</strong> DTI registration, lease or ownership proof, and valid ID.</p>
+            <a class="service-request" href="#request-service" data-request-type="Business Permit">Request this service</a>
+          </article>
+          <article class="service-card">
+            <span class="service-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><circle cx="8" cy="10" r="2"/><path d="M14 9h4M14 13h4M5 16c.8-1.5 1.8-2.2 3-2.2s2.2.7 3 2.2"/></svg>
+            </span>
+            <span class="pill">Resident ID</span>
+            <h3>Community ID</h3>
+            <p>A barangay-issued ID for residents who need local identification.</p>
+            <dl class="service-specs">
+              <div><dt>Processing</dt><dd>Same day</dd></div>
+            </dl>
+            <p class="service-docs"><strong>Bring:</strong> valid ID, 1&times;1 photo, and proof of residency.</p>
+            <a class="service-request" href="#request-service" data-request-type="Community ID">Request this service</a>
+          </article>
+        </div>
+        <p class="form-hint services-note">Processing times may change. Please confirm with the barangay office before filing.</p>
+      </section>
+
+      <section class="page" id="request-service">
+        <div class="section-heading">
+          <div>
+            <h2>Request a service</h2>
+            <p>Fill in your details below. Sign in with your resident account to submit and track the request.</p>
+          </div>
+        </div>
+
+        <div class="card-panel">
+          <div class="alert alert-info account-gate" data-account-gate hidden>
+            <strong>Account required.</strong> You must have an account to submit a service request.
+            <a href="login.html?next=services.html">Log in</a> or
+            <a href="login.html?mode=register&amp;next=services.html">create an account</a> to continue.
+            The form is disabled until you sign in.
+          </div>
+          <div class="alert" id="form-alert" role="alert" tabindex="-1" hidden></div>
+
+          <form id="service-request-form" novalidate>
+            <div class="grid-2">
+              <label>
+                Full name
+                <input type="text" name="Full_Name" id="service-full-name" required maxlength="120" placeholder="Juan Dela Cruz">
+                <span class="field-note" data-name-note hidden>Locked to your resident account.</span>
+              </label>
+              <label>
+                Contact number
+                <input type="tel" name="Contact_Number" id="service-contact" required maxlength="40" placeholder="09XX-XXX-XXXX">
+                <span class="field-note" data-contact-note hidden>Locked to your resident account.</span>
+              </label>
+            </div>
+            <label>
+              Address
+              <input type="text" name="Address" id="service-address" required maxlength="200" placeholder="Brgy. Sta. Lucia, Santa Ana, Pampanga">
+              <span class="field-note" data-address-note hidden>Locked to your resident account.</span>
+            </label>
+            <label>
+              Type of request
+              <select name="Request_Type" id="service-type" required>
+                <option value="">Select a request</option>
+                <option value="Barangay Clearance">Barangay Clearance</option>
+                <option value="Certificate of Indigency">Certificate of Indigency</option>
+                <option value="Business Permit">Business Permit</option>
+                <option value="Community ID">Community ID</option>
+                <option value="Certificate of Residency">Certificate of Residency</option>
+                <option value="Other Barangay Document">Other Barangay Document</option>
+              </select>
+            </label>
+            <label>
+              Purpose
+              <textarea name="Purpose" id="service-purpose" required maxlength="1000" placeholder="State the reason for your request"></textarea>
+            </label>
+            <button type="submit" class="form-button">Submit request</button>
+            <p class="form-hint">After submitting, you can follow the status of this request in your resident portal. The barangay office may contact you for supporting documents.</p>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="page footer-grid">
+        <div>
+          <h3>Barangay Sta. Lucia</h3>
+          <p>The community information system for residents and visitors of Sta. Lucia, Santa Ana, Pampanga. Stay informed, connected, and supported.</p>
+        </div>
+        <div>
+          <h4>Quick Links</h4>
+          <a href="index.html">Home</a><br >
+          <a href="services.html">Services</a><br >
+          <a href="emergency.html">Emergency</a><br >
+          <a href="concerns.html">Concerns</a>
+        </div>
+        <div>
+          <h4>Contact</h4>
+          <p>Barangay Hall<br >0998-765-4321<br >sta.lucia.barangay@example.com<br >Mon&ndash;Fri &middot; 8:00 AM&ndash;5:00 PM</p>
+        </div>
+        <div>
+          <h4>Emergency Hotline</h4>
+          <p>0900-123-4567</p>
+        </div>
+      </div>
+      <div class="page footer-bottom">
+        <small>&copy; 2026 Barangay Sta. Lucia. All rights reserved.</small>
+      </div>
+    </footer>
+
+    <script src="js/db.js"></script>
+    <script src="js/site.js"></script>
+    <script src="js/forms.js"></script>
+  </body>
+</html>

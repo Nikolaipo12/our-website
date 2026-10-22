@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emergency · Barangay Sta. Lucia</title>
+    <meta name="description" content="Emergency hotlines and current alerts for Barangay Sta. Lucia.">
+    <link rel="stylesheet" href="styles.css">
+    <script>
+      // Show the branded loader only when arriving through an internal link.
+      try {
+        if (window.sessionStorage.getItem("bsl.nav") === "1") {
+          document.documentElement.classList.add("page-arriving");
+          window.sessionStorage.removeItem("bsl.nav");
+        }
+      } catch (error) {}
+      window.setTimeout(function () {
+        document.documentElement.classList.remove("page-arriving", "page-revealing");
+      }, 4000);
+    </script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+    <div class="page-loader" aria-hidden="true">
+      <div class="page-loader-inner">
+        <span class="page-loader-mark">SL</span>
+        <span class="page-loader-name">Barangay Sta. Lucia</span>
+        <span class="page-loader-note">Community Information System &middot; Santa Ana, Pampanga</span>
+        <span class="page-loader-track"><span></span></span>
+      </div>
+    </div>
+    <div class="topbar">
+      <div class="page topbar-inner">
+        <span class="topbar-location">Sta. Lucia, Santa Ana, Pampanga</span>
+        <span class="topbar-hours">Mon&ndash;Fri &middot; 8:00 AM&ndash;5:00 PM</span>
+        <a href="tel:09001234567" class="topbar-emergency">Emergency: 0900-123-4567</a>
+      </div>
+    </div>
+    <header>
+      <input type="checkbox" id="nav-toggle" aria-hidden="true">
+      <div class="nav-inner">
+        <a href="index.html" class="brand">
+          <span class="seal" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M3 10 12 4l9 6M5 10v9M9.5 10v9M14.5 10v9M19 10v9M3 21h18" stroke="#FFFFFF" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+              
+            </svg>
+          </span>
+          <div>
+            <div class="brand-name">Barangay Sta. Lucia</div>
+            <div class="brand-sub">Community Information System</div>
+          </div>
+        </a>
+
+        <nav class="nav-links" aria-label="Primary">
+                    <a href="index.html">Home</a>
+          <a href="announcements.html">Announcements</a>
+          <a href="services.html">Services</a>
+          <a href="emergency.html" aria-current="page">Emergency</a>
+          <a href="officials.html">Officials</a>
+          <a href="concerns.html">Concerns</a>
+        </nav>
+
+        <a href="portal.html" class="cta-button">Resident Portal</a>
+
+        <label for="nav-toggle" class="menu-toggle">
+          <span class="bars" aria-hidden="true"><span></span><span></span><span></span></span>
+          <span class="visually-hidden menu-toggle-label">Open menu</span>
+        </label>
+      </div>
+
+      <div class="nav-scrim" aria-hidden="true"></div>
+      <nav class="mobile-menu" aria-label="Mobile">
+          <label for="nav-toggle" class="mobile-menu-close">
+            <span aria-hidden="true">&times;</span>
+            <span class="visually-hidden">Close menu</span>
+          </label>
+                    <a href="index.html">Home</a>
+          <a href="announcements.html">Announcements</a>
+          <a href="services.html">Services</a>
+          <a href="emergency.html" aria-current="page">Emergency</a>
+          <a href="officials.html">Officials</a>
+          <a href="concerns.html">Concerns</a>
+          <a href="portal.html" class="cta-button">Resident Portal</a>
+      </nav>
+    </header>
+
+    <main id="main-content" tabindex="-1">
+      <section class="page section-first">
+        <div class="page-header">
+          <h1>Emergency information</h1>
+          <p>Urgent contacts and alerts for quick response when it matters most.</p>
+        </div>
+
+        <h2 class="visually-hidden">Emergency contacts and alerts</h2>
+        <div class="cards-grid">
+          <article class="emergency-card">
+            <div class="card-top"><h3>Barangay Hall</h3><span class="status-badge status-open" data-hall-status><span data-hall-status-state>Open</span></span></div>
+            <div class="meta">Contact: 0998-765-4321</div>
+            <div class="meta">Department: Barangay Administration</div>
+            <div class="footer-row"><a href="tel:09987654321" class="small-button">Call</a><span>Available 8:00 AM&ndash;5:00 PM</span></div>
+          </article>
+          <article class="emergency-card">
+            <div class="card-top"><h3>Emergency Hotline</h3><span class="status-badge status-pending">24/7</span></div>
+            <div class="meta">Contact: 0900-123-4567</div>
+            <div class="meta">Department: Barangay Emergency Team</div>
+            <div class="footer-row"><a href="tel:09001234567" class="small-button">Call</a><span>Immediate assistance</span></div>
+          </article>
+          <article class="emergency-card">
+            <div class="card-top"><h3>Police</h3><span class="status-badge status-pending">24/7</span></div>
+            <div class="meta">Contact: 911</div>
+            <div class="meta">Organization: PNP Sta. Ana</div>
+            <div class="footer-row"><a href="tel:911" class="small-button">Call</a><span>For safety and security</span></div>
+          </article>
+          <article class="emergency-card">
+            <div class="card-top"><h3>Fire Department</h3><span class="status-badge status-pending">24/7</span></div>
+            <div class="meta">Contact: 911</div>
+            <div class="meta">Organization: BFP Candaba</div>
+            <div class="footer-row"><a href="tel:911" class="small-button">Call</a><span>Fire emergencies</span></div>
+          </article>
+          <article class="emergency-card">
+            <div class="card-top"><h3>Medical Assistance</h3><span class="status-badge status-pending">24/7</span></div>
+            <div class="meta">Contact: 0909-888-1234</div>
+            <div class="meta">Organization: Health Center</div>
+            <div class="footer-row"><a href="tel:09098881234" class="small-button">Call</a><span>Medical emergencies</span></div>
+          </article>
+          <article class="emergency-card">
+            <div class="card-top"><h3>Disaster Response</h3><span class="status-badge status-pending">24/7</span></div>
+            <div class="meta">Contact: 0900-123-4567</div>
+            <div class="meta">Department: Barangay Disaster Risk Reduction</div>
+            <div class="footer-row"><a href="tel:09001234567" class="small-button">Call</a><span>Evacuation and rescue</span></div>
+          </article>
+        </div>
+
+        <div class="alert-panel">
+          <h3>Heavy rain and flood alert</h3>
+          <p>Please monitor local conditions and avoid low-lying areas during the next 24 hours. Secure documents and follow instructions from emergency teams.</p>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="page footer-grid">
+        <div>
+          <h3>Barangay Sta. Lucia</h3>
+          <p>The community information system for residents and visitors of Sta. Lucia, Santa Ana, Pampanga. Stay informed, connected, and supported.</p>
+        </div>
+        <div>
+          <h4>Quick Links</h4>
+          <a href="index.html">Home</a><br >
+          <a href="services.html">Services</a><br >
+          <a href="emergency.html">Emergency</a><br >
+          <a href="concerns.html">Concerns</a>
+        </div>
+        <div>
+          <h4>Contact</h4>
+          <p>Barangay Hall<br >0998-765-4321<br >sta.lucia.barangay@example.com<br >Mon&ndash;Fri &middot; 8:00 AM&ndash;5:00 PM</p>
+        </div>
+        <div>
+          <h4>Emergency Hotline</h4>
+          <p>0900-123-4567</p>
+        </div>
+      </div>
+      <div class="page footer-bottom">
+        <small>&copy; 2026 Barangay Sta. Lucia. All rights reserved.</small>
+      </div>
+    </footer>
+
+    <script src="js/db.js"></script>
+    <script src="js/site.js"></script>
+  </body>
+</html>

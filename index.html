@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home · Barangay Sta. Lucia</title>
+    <meta name="description" content="Community information system for Barangay Sta. Lucia, Santa Ana, Pampanga.">
+    <link rel="stylesheet" href="styles.css">
+    <script>
+      // Show the branded loader only when arriving through an internal link.
+      try {
+        if (window.sessionStorage.getItem("bsl.nav") === "1") {
+          document.documentElement.classList.add("page-arriving");
+          window.sessionStorage.removeItem("bsl.nav");
+        }
+      } catch (error) {}
+      window.setTimeout(function () {
+        document.documentElement.classList.remove("page-arriving", "page-revealing");
+      }, 4000);
+    </script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+    <div class="page-loader" aria-hidden="true">
+      <div class="page-loader-inner">
+        <span class="page-loader-mark">SL</span>
+        <span class="page-loader-name">Barangay Sta. Lucia</span>
+        <span class="page-loader-note">Community Information System &middot; Santa Ana, Pampanga</span>
+        <span class="page-loader-track"><span></span></span>
+      </div>
+    </div>
+    <div class="topbar">
+      <div class="page topbar-inner">
+        <span class="topbar-location">Sta. Lucia, Santa Ana, Pampanga</span>
+        <span class="topbar-hours">Mon&ndash;Fri &middot; 8:00 AM&ndash;5:00 PM</span>
+        <a href="tel:09001234567" class="topbar-emergency">Emergency: 0900-123-4567</a>
+      </div>
+    </div>
+    <header>
+      <input type="checkbox" id="nav-toggle" aria-hidden="true">
+      <div class="nav-inner">
+        <a href="index.html" class="brand">
+          <span class="seal" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M3 10 12 4l9 6M5 10v9M9.5 10v9M14.5 10v9M19 10v9M3 21h18" stroke="#FFFFFF" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+              
+            </svg>
+          </span>
+          <div>
+            <div class="brand-name">Barangay Sta. Lucia</div>
+            <div class="brand-sub">Community Information System</div>
+          </div>
+        </a>
+
+        <nav class="nav-links" aria-label="Primary">
+                    <a href="index.html" aria-current="page">Home</a>
+          <a href="announcements.html">Announcements</a>
+          <a href="services.html">Services</a>
+          <a href="emergency.html">Emergency</a>
+          <a href="officials.html">Officials</a>
+          <a href="concerns.html">Concerns</a>
+        </nav>
+
+        <a href="portal.html" class="cta-button">Resident Portal</a>
+
+        <label for="nav-toggle" class="menu-toggle">
+          <span class="bars" aria-hidden="true"><span></span><span></span><span></span></span>
+          <span class="visually-hidden menu-toggle-label">Open menu</span>
+        </label>
+      </div>
+
+      <div class="nav-scrim" aria-hidden="true"></div>
+      <nav class="mobile-menu" aria-label="Mobile">
+          <label for="nav-toggle" class="mobile-menu-close">
+            <span aria-hidden="true">&times;</span>
+            <span class="visually-hidden">Close menu</span>
+          </label>
+                    <a href="index.html" aria-current="page">Home</a>
+          <a href="announcements.html">Announcements</a>
+          <a href="services.html">Services</a>
+          <a href="emergency.html">Emergency</a>
+          <a href="officials.html">Officials</a>
+          <a href="concerns.html">Concerns</a>
+          <a href="portal.html" class="cta-button">Resident Portal</a>
+      </nav>
+    </header>
+
+    <main id="main-content" tabindex="-1">
+      <section class="hero-band">
+        <div class="hero page">
+          <div class="hero-title">
+            <span class="eyebrow"><span class="eyebrow-dot" aria-hidden="true"></span> Official community portal</span>
+            <h1>Barangay services, <span>without the runaround.</span></h1>
+            <p class="hero-lede">Request documents, follow local updates, and reach the right office &mdash; all from one place.</p>
+            <div class="hall-status" data-hall-status aria-live="polite">
+              <span class="hall-status-dot" aria-hidden="true"></span>
+              <span class="hall-status-label">Barangay Hall</span>
+              <strong class="hall-status-state" data-hall-status-state>Open</strong>
+              <span class="hall-status-hours">Mon&ndash;Fri &middot; 8:00 AM&ndash;5:00 PM</span>
+            </div>
+            <div class="hero-buttons">
+              <a href="concerns.html" class="primary">Submit a concern</a>
+              <a href="services.html" class="secondary">View services</a>
+            </div>
+            <div class="hero-meta">
+              <span>Santa Ana, Pampanga</span>
+              <span>Est. 1985</span>
+            </div>
+          </div>
+
+          <aside class="hero-side" aria-label="Barangay at a glance">
+            <div class="hero-side-head">
+              <span class="hero-emblem" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M3 10 12 4l9 6M5 10v9M9.5 10v9M14.5 10v9M19 10v9M3 21h18" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </span>
+              <div>
+                <span class="eyebrow eyebrow-dark">Visit us</span>
+                <strong>Barangay hall</strong>
+              </div>
+            </div>
+            <dl class="hero-facts">
+              <div>
+                <dt>Location</dt>
+                <dd>Santa Ana, Pampanga</dd>
+              </div>
+              <div>
+                <dt>Office hours</dt>
+                <dd>Mon&ndash;Fri &middot; 8:00 AM&ndash;5:00 PM</dd>
+              </div>
+              <div>
+                <dt>Emergency hotline</dt>
+                <dd><a href="tel:09001234567">0900-123-4567</a></dd>
+              </div>
+            </dl>
+            <a href="emergency.html" class="hero-side-link">View emergency contacts <span aria-hidden="true">&rarr;</span></a>
+          </aside>
+        </div>
+      </section>
+
+      <section class="page section-first" id="about" aria-labelledby="about-heading">
+        <div class="section-heading">
+          <div>
+            <span class="eyebrow eyebrow-dark">About the barangay</span>
+            <h2 id="about-heading">Barangay Sta. Lucia</h2>
+            <p>Our history, mission, vision, and community priorities.</p>
+          </div>
+        </div>
+        <div class="grid-2">
+          <article class="about-card">
+            <h3>Barangay history</h3>
+            <p>Barangay Sta. Lucia has served its community since 1985, growing as a safe and supportive neighborhood filled with local programs and resident participation.</p>
+          </article>
+          <article class="about-card">
+            <h3>Mission &amp; vision</h3>
+            <p><strong>Mission:</strong> To provide inclusive, transparent, and responsive services for every resident.<br><strong>Vision:</strong> A thriving barangay where everyone feels safe, heard, and supported.</p>
+          </article>
+        </div>
+        <div class="grid-2 about-row">
+          <article class="about-card">
+            <h3>Goals</h3>
+            <p>Strengthen community services, improve public safety, expand health and education support, and foster active resident participation.</p>
+          </article>
+          <article class="about-card">
+            <h3>Location</h3>
+            <p>Barangay Sta. Lucia is located in the heart of Santa Ana, Pampanga, with easy access to public transport, schools, and the barangay hall.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="page">
+        <div class="section-heading">
+          <div>
+            <span class="eyebrow eyebrow-dark">Community updates</span>
+            <h2>Recent announcements</h2>
+            <p>A quick look at what's new this month.</p>
+          </div>
+          <a href="announcements.html" class="text-link">See all announcements <span aria-hidden="true">&rarr;</span></a>
+        </div>
+        <div class="cards-grid" id="recent-announcements">
+          <noscript>
+            <p class="meta">Enable JavaScript to load the latest barangay announcements.</p>
+          </noscript>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="page footer-grid">
+        <div>
+          <h3>Barangay Sta. Lucia</h3>
+          <p>The community information system for residents and visitors of Sta. Lucia, Santa Ana, Pampanga. Stay informed, connected, and supported.</p>
+        </div>
+        <div>
+          <h4>Quick Links</h4>
+          <a href="index.html">Home</a><br >
+          <a href="services.html">Services</a><br >
+          <a href="emergency.html">Emergency</a><br >
+          <a href="concerns.html">Concerns</a>
+        </div>
+        <div>
+          <h4>Contact</h4>
+          <p>Barangay Hall<br >0998-765-4321<br >sta.lucia.barangay@example.com<br >Mon&ndash;Fri &middot; 8:00 AM&ndash;5:00 PM</p>
+        </div>
+        <div>
+          <h4>Emergency Hotline</h4>
+          <p>0900-123-4567</p>
+        </div>
+      </div>
+      <div class="page footer-bottom">
+        <small>&copy; 2026 Barangay Sta. Lucia. All rights reserved.</small>
+      </div>
+    </footer>
+
+    <script src="js/db.js"></script>
+    <script src="js/site.js"></script>
+    <script src="js/announcements.js"></script>
+  </body>
+</html>
